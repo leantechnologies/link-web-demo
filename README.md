@@ -22,3 +22,6 @@ Update values to reflect your own application settings (you can get access to th
 | reconnect_id      | Returned by the Data API when an OTP is required - [learn more about generating a `reconnect_id` here](https://docs.leantech.me/testing/) |
 | customer_id       | A Customer object created with the [Payments API](https://docs.leantech.me/payment-api)                                                   |
 | payment_intent_id | A Payment Intent object created with the  [Payments API](https://docs.leantech.me/payment-api)                                            |
+
+**Questions about this repository?**
+Feel free to contact us at contact@leantech.me 
