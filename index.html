@@ -165,6 +165,15 @@
           <button
             class="btn btn-lg btn-secondary"
             type="button"
+            onclick="updatePaymentSource();"
+          >
+            Update payment source
+          </button>
+        </p>
+        <p class="lead">
+          <button
+            class="btn btn-lg btn-secondary"
+            type="button"
             onclick="pay();"
           >
             Initiate payment
@@ -198,6 +207,16 @@
         reconnect_id: "[RECONNECT_ID]",
         show_logs: true,
         sandbox: true,
+      });
+    }
+    
+    function updatePaymentSource() {
+      Lean.updatePaymentSource({
+        app_token: "[YOUR_APP_TOKEN]",
+        customer_id: "[CUSTOMER_ID]",
+        payment_source_id: "[PAYMENT_SOURCE_ID]",
+        payment_destination_id: "[PAYMENT_DESTINATION_ID]",
+        sandbox: true
       });
     }
 
