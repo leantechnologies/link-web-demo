@@ -140,6 +140,15 @@
             type="button"
             onclick="link();"
           >
+            Link
+          </button>
+        </p>
+        <p class="lead">
+          <button
+            class="btn btn-lg btn-secondary"
+            type="button"
+            onclick="connect();"
+          >
             Connect
           </button>
         </p>
@@ -200,12 +209,21 @@
         sandbox: true,
       });
     }
+    
+    function connect() {
+      Lean.connect({
+        app_token: "[YOUR_APP_TOKEN]",
+        customer_id: "[CUSTOMER_ID]",
+        permissions: ["identity", "transactions", "balance", "accounts", "payments"],
+        payment_destination_id: "[YOUR_PAYMENT_DESTINATION_ID]",
+        sandbox: true,
+      });
+    }
 
     function reconnect() {
       Lean.reconnect({
         app_token: "[YOUR_APP_TOKEN]",
         reconnect_id: "[RECONNECT_ID]",
-        show_logs: true,
         sandbox: true,
       });
     }
